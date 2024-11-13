@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show and Delete Content</title>
+</head>
+
+<body>
+
+    <!-- Buttons for Show and Delete -->
+    <button id="showButton">Show</button>
+    <button id="deleteButton">Delete</button>
+
+    <!-- Container to display content -->
+    <div id="contentContainer"></div>
+
+    <script>
+        // Get references to the buttons and the content container
+        const showButton = document.getElementById('showButton');
+        const deleteButton = document.getElementById('deleteButton');
+        const contentContainer = document.getElementById('contentContainer');
+
+        // Add content on "Show" button click
+        showButton.onclick = () => {
+            if (!contentContainer.innerHTML) { // Check if content is empty
+                contentContainer.innerHTML = '<p>This is the added content!</p>';
+            }
+        };
+
+        // Remove content on "Delete" button click
+        deleteButton.onclick = () => {
+            contentContainer.innerHTML = '';
+        };
+    </script>
+
+</body>
+
+</html>
